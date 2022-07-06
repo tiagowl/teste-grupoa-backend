@@ -1,0 +1,7 @@
+{
+    "exec": "tsc --incremental && node ./build/index.js",
+    "watch":[
+        "./*ts",
+        "src"
+    ]
+}
