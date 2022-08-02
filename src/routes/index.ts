@@ -1,10 +1,11 @@
-import {Router} from 'express';
-import Login from './Login';
+import {Router} from "express"
+import Login from "./Login";
 
-const routers: Router[] = [
-    Login()
-];
+const routes : Router[] = [
+    Login
+]
 
-export default function getRouters(){
-    return Router({mergeParams: true}).use(routers)
+export default function getRouter() {
+    return Router({ mergeParams: true }).use(routes);
 }
+

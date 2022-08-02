@@ -1,13 +1,15 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 const app = express();
+import cors from 'cors';
 import getRouters from './src/routes';
 
 const routers = getRouters();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.use(cors());
 app.use(routers);
-app.use(bodyParser.json());
 
 app.listen(3000, ()=>{
-    console.log("Servidor rodando.")
+    console.log("Servidor rodando.");
 })

@@ -3,5 +3,6 @@
     "watch":[
         "./*ts",
         "src"
-    ]
+    ],
+    "ext": "ts, js"
 }
